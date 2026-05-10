@@ -1,6 +1,6 @@
 # Education Skills MCP Server
 
-MCP server exposing the [Claude Education Skills](https://github.com/GarethManning/education-agent-skills) library as callable tools and prompts. 107 evidence-based education skills across 14 domains, plus 4 discovery tools.
+MCP server exposing the [Education Agent Skills](https://github.com/GarethManning/education-agent-skills) library as callable tools and prompts. 131 evidence-based education skills across 17 domains, plus 4 discovery tools.
 
 **Production URL:** `https://mcp-server-sigma-sooty.vercel.app/mcp`
 
@@ -8,8 +8,8 @@ MCP server exposing the [Claude Education Skills](https://github.com/GarethManni
 
 Skills are registered **twice** — as both MCP tools and MCP prompts:
 
-- **Tools** (111 total: 107 skills + 4 meta) — work in Claude.ai and any MCP client. The calling Claude model receives the assembled skill prompt via instruction framing and generates the output.
-- **Prompts** (107) — ready for Claude Desktop and future clients that surface MCP prompts in their UI. The prompt is injected into the conversation as a user message.
+- **Tools** (135 total: 131 skills + 4 meta) — work in Claude.ai and any MCP client. The calling Claude model receives the assembled skill prompt via instruction framing and generates the output.
+- **Prompts** (131) — ready for Claude Desktop and future clients that surface MCP prompts in their UI. The prompt is injected into the conversation as a user message.
 
 ### Meta-tools (always available as tools)
 
@@ -80,7 +80,7 @@ npm run bundle-skills # Re-generate src/skills.json for Vercel deployment
 
 | Variable | Description |
 |----------|-------------|
-| `SKILLS_FILTER` | Comma-separated domain names to limit which domains are loaded. Omit for all 14 domains. |
+| `SKILLS_FILTER` | Comma-separated domain names to limit which domains are loaded. Omit for all 17 domains. |
 
 ## How skill tools work
 
