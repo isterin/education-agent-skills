@@ -10,7 +10,7 @@
 ### Top-level files and directories
 
 ```
-claude-education-skills/
+education-agent-skills/
 ├── .claude-plugin/          # Claude Code plugin manifest
 │   ├── marketplace.json
 │   └── plugin.json
@@ -20,8 +20,8 @@ claude-education-skills/
 ├── .gitignore
 ├── CLAUDE.md                # Claude Code session entry point
 ├── README.md
-├── claude-education-skills-skills-only.zip   # pre-built archive (untracked)
-├── claude-education-skills.zip               # pre-built archive (untracked)
+├── education-agent-skills-skills-only.zip   # pre-built archive (untracked)
+├── education-agent-skills.zip               # pre-built archive (untracked)
 ├── docs/                    # supporting documentation
 │   ├── AGENT_SKILLS_V2_SPEC.md
 │   ├── AGENT_SKILLS.md
@@ -267,12 +267,12 @@ The existing `.claude-plugin/plugin.json` content:
 
 ```json
 {
-  "name": "claude-education-skills",
+  "name": "education-agent-skills",
   "display_name": "Claude Education Skills Library",
   "version": "2.1.0",
   "description": "124 evidence-based pedagogical skills...",
   "author": { "name": "Gareth Manning", "url": "https://github.com/GarethManning" },
-  "homepage": "https://github.com/GarethManning/claude-education-skills",
+  "homepage": "https://github.com/GarethManning/education-agent-skills",
   "license": "CC BY-SA 4.0"
 }
 ```
@@ -283,7 +283,7 @@ A Codex-compatible `.codex-plugin/plugin.json` would need at minimum:
 
 ```json
 {
-  "name": "claude-education-skills",
+  "name": "education-agent-skills",
   "version": "2.1.0",
   "description": "...",
   "skills": "./skills/"

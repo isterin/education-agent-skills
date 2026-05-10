@@ -342,7 +342,7 @@ Every skill in this domain must begin its "What This Skill Does" section with:
 2. **ARCHITECTURE.md** — reframe as "composable and extensible."
 3. **IMPLEMENTATIONS.md** — Strive, Hippo, Ren, Kaku connections.
 4. **CONTRIBUTING.md** — inclusion criteria for external contributors.
-5. **MCP server** (new repo: `claude-education-skills-mcp`) — exposes skills as callable Claude tools. MIT licence.
+5. **MCP server** (new repo: `education-agent-skills-mcp`) — exposes skills as callable Claude tools. MIT licence.
 
 ---
 

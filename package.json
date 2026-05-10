@@ -1,5 +1,5 @@
 {
-  "name": "claude-education-skills",
+  "name": "education-agent-skills",
   "version": "1.0.0",
   "description": "## Install",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GarethManning/claude-education-skills.git"
+    "url": "git+https://github.com/GarethManning/education-agent-skills.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GarethManning/claude-education-skills/issues"
+    "url": "https://github.com/GarethManning/education-agent-skills/issues"
   },
-  "homepage": "https://github.com/GarethManning/claude-education-skills#readme",
+  "homepage": "https://github.com/GarethManning/education-agent-skills#readme",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "yaml": "^2.8.3"

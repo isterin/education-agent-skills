@@ -198,8 +198,8 @@ test.describe("Plugin Manifest Validation", () => {
   });
 
   test("plugin.json is valid JSON", () => {
-    expect(plugin.name).toBe("claude-education-skills");
-    expect(plugin.version).toBe("2.0.0");
+    expect(plugin.name).toBe("education-agent-skills");
+    expect(plugin.version).toBe("2.1.0");
   });
 
   test("plugin.json skills directory exists", () => {

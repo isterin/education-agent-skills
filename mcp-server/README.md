@@ -1,6 +1,6 @@
 # Education Skills MCP Server
 
-MCP server exposing the [Claude Education Skills](https://github.com/GarethManning/claude-education-skills) library as callable tools and prompts. 107 evidence-based education skills across 14 domains, plus 4 discovery tools.
+MCP server exposing the [Claude Education Skills](https://github.com/GarethManning/education-agent-skills) library as callable tools and prompts. 107 evidence-based education skills across 14 domains, plus 4 discovery tools.
 
 **Production URL:** `https://mcp-server-sigma-sooty.vercel.app/mcp`
 

@@ -1,11 +1,11 @@
-# Claude Education Skills Library
+# Education Agent Skills Library
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-1.0-blue)](https://agentskills.io)
-[![Skills](https://img.shields.io/badge/skills-131-blue)](https://github.com/GarethManning/claude-education-skills)
+[![Skills](https://img.shields.io/badge/skills-131-blue)](https://github.com/GarethManning/education-agent-skills)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![Last Commit](https://img.shields.io/github/last-commit/GarethManning/claude-education-skills)](https://github.com/GarethManning/claude-education-skills/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/GarethManning/education-agent-skills)](https://github.com/GarethManning/education-agent-skills/commits/main)
 
-An open-source library of 131 evidence-based pedagogical skills for curriculum design, lesson planning, and assessment — usable today by any educator with access to Claude, and engineered for AI agent orchestration.
+An open-source library of 131 evidence-based pedagogical skills for curriculum design, lesson planning, and assessment — works in Claude Code, Claude.ai (via MCP), and OpenAI Codex, and engineered for AI agent orchestration.
 
 ---
 
@@ -63,7 +63,7 @@ That is one use case. The same library can power school-wide curriculum audits, 
 Go to **Customize → (+) Add Plugin** and paste the GitHub URL:
 
 ```
-https://github.com/GarethManning/claude-education-skills
+https://github.com/GarethManning/education-agent-skills
 ```
 
 CoWork reads `.claude-plugin/plugin.json` and installs all 131 skills automatically.
@@ -83,7 +83,7 @@ On first use: click the **+** icon in the message bar → select **Connectors** 
 Run the server locally without any account or deployment:
 
 ```bash
-npx claude-education-skills
+npx education-agent-skills
 ```
 
 Or add it permanently to your Claude Code config:
@@ -91,9 +91,9 @@ Or add it permanently to your Claude Code config:
 ```json
 {
   "mcpServers": {
-    "claude-education-skills": {
+    "education-agent-skills": {
       "command": "npx",
-      "args": ["claude-education-skills"]
+      "args": ["education-agent-skills"]
     }
   }
 }
@@ -102,14 +102,14 @@ Or add it permanently to your Claude Code config:
 ### Claude Code CLI (plugin)
 
 ```
-/plugin marketplace add GarethManning/claude-education-skills
-/plugin install claude-education-skills
+/plugin marketplace add GarethManning/education-agent-skills
+/plugin install education-agent-skills
 ```
 
 Or install directly from the repo URL:
 
 ```
-claude plugin install https://github.com/GarethManning/claude-education-skills
+claude plugin install https://github.com/GarethManning/education-agent-skills
 ```
 
 Skills load with progressive disclosure — metadata only until a skill is actually needed.
@@ -157,6 +157,36 @@ No API key. No technical setup. No dependencies.
 - Lessons per week: 3
 
 Claude returns a complete week-by-week schedule showing when to teach new content and when to revisit previous topics at expanding intervals — with specific retrieval activities for each review slot. The schedule follows Cepeda et al.'s (2006) meta-analysis on optimal spacing intervals, includes interleaving across topics, and comes with practical guidance on what to do when review reveals gaps.
+
+---
+
+## Install as Agent Skills
+
+### Claude.ai (MCP server)
+
+Already live at `mcp-server-sigma-sooty.vercel.app/mcp` — add as a custom MCP server in Claude settings under **Settings → Connectors**.
+
+### Claude Code
+
+Clone the repo and add `skills/` to your Claude Code skills path, or symlink individual skills to `~/.claude/skills/`.
+
+```bash
+git clone https://github.com/GarethManning/education-agent-skills.git
+```
+
+### OpenAI Codex
+
+Clone the repo. Install as a plugin from the cloned directory, or copy individual skill folders to `~/.codex/skills/` for global access.
+
+```bash
+git clone https://github.com/GarethManning/education-agent-skills.git
+# Copy a skill for global access:
+cp -r skills/<domain>/<skill-name> ~/.codex/skills/
+```
+
+### Any Agent Skills-compatible tool
+
+Copy skill folders from `skills/` into your agent's skills directory. Each skill follows the open Agent Skills standard (SKILL.md with name/description frontmatter).
 
 ---
 

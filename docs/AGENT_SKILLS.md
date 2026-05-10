@@ -9,7 +9,7 @@ This document is for developers and AI builders who want to consume, orchestrate
 ### As a Claude Code Plugin
 
 ```
-/plugin install GarethManning/claude-education-skills
+/plugin install GarethManning/education-agent-skills
 ```
 
 This makes all 107 skills available in your Claude Code session. Skills with `disable-model-invocation: false` will auto-activate when conversation context matches their trigger descriptions. Skills with `disable-model-invocation: true` must be invoked explicitly.
@@ -17,7 +17,7 @@ This makes all 107 skills available in your Claude Code session. Skills with `di
 ### From Source
 
 ```bash
-git clone https://github.com/GarethManning/claude-education-skills.git
+git clone https://github.com/GarethManning/education-agent-skills.git
 ```
 
 The `plugin.json` manifest at the repo root declares the plugin metadata. The `skills/` directory contains all skill files. The `registry.json` file provides the machine-readable index.

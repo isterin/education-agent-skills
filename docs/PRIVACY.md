@@ -27,7 +27,7 @@ The server is hosted on Vercel. Vercel's infrastructure may retain standard serv
 
 ## Open Source
 
-The full source code for this server is available at [github.com/GarethManning/claude-education-skills](https://github.com/GarethManning/claude-education-skills). Anyone can inspect exactly what the server does.
+The full source code for this server is available at [github.com/GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills). Anyone can inspect exactly what the server does.
 
 ## Contact
 

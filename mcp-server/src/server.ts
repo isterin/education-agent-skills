@@ -23,7 +23,7 @@ export function createServer(skills: LoadedSkill[]): McpServer {
   }
 
   const server = new McpServer({
-    name: "claude-education-skills",
+    name: "education-agent-skills",
     version: "0.3.0",
   });
 

@@ -9,7 +9,7 @@ This spec upgrades the Claude Education Skills Library from a custom MCP-served 
 
 ## Repo
 
-`~/Documents/Github/claude-education-skills`
+`~/Documents/Github/education-agent-skills`
 
 Work on branch `feature/agent-skills-v2`. Do not merge to main without human review of REVIEW.md (generated in Phase 2).
 
@@ -26,7 +26,7 @@ Work on branch `feature/agent-skills-v2`. Do not merge to main without human rev
 ## Current Structure
 
 ```
-claude-education-skills/
+education-agent-skills/
 ├── ai-learning-science/           ← domain folder
 │   └── skill-name.md              ← flat skill files
 ├── curriculum-assessment/
@@ -43,7 +43,7 @@ claude-education-skills/
 ## Target Structure
 
 ```
-claude-education-skills/
+education-agent-skills/
 ├── skills/                                          ← NEW: plugin skills root
 │   ├── ai-learning-science/                         ← domain preserved as subdirectory
 │   │   └── adaptive-hint-sequence-designer/         ← NEW: skill folder
@@ -370,12 +370,12 @@ print("registry.json valid")
 
 ```json
 {
-  "name": "claude-education-skills",
+  "name": "education-agent-skills",
   "display_name": "Claude Education Skills Library",
   "version": "2.0.0",
   "description": "106 evidence-based pedagogical skills for educators. Curriculum design, assessment, learning science, wellbeing, professional learning, and more.",
   "author": "Gareth Manning",
-  "homepage": "https://github.com/GarethManning/claude-education-skills",
+  "homepage": "https://github.com/GarethManning/education-agent-skills",
   "license": "CC BY-SA 4.0",
   "skills": "skills/",
   "min_claude_version": "claude-sonnet-4-6"
@@ -409,12 +409,12 @@ Add at the top of the README (before existing content):
 ## Install
 
 ```
-/plugin install GarethManning/claude-education-skills
+/plugin install GarethManning/education-agent-skills
 ```
 Or browse the [Skills Directory](https://claude.ai) to install individual domain bundles.
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-1.0-blue)](https://agentskills.io)
-[![Skills](https://img.shields.io/badge/skills-106-blue)](https://github.com/GarethManning/claude-education-skills)
+[![Skills](https://img.shields.io/badge/skills-106-blue)](https://github.com/GarethManning/education-agent-skills)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 ```
 
@@ -487,7 +487,7 @@ Write a validation script that checks every SKILL.md for:
 
 After all phases complete, run these five tests manually and report results:
 
-1. **Install test:** In a fresh Claude Code session, run `/plugin install GarethManning/claude-education-skills` (or install from local path). Confirm skills appear in `/` menu.
+1. **Install test:** In a fresh Claude Code session, run `/plugin install GarethManning/education-agent-skills` (or install from local path). Confirm skills appear in `/` menu.
 
 2. **Auto-activation test:** Say "I need to plan revision sessions for my Year 9 class over the next 6 weeks." Confirm `spaced-practice-scheduler` activates or is surfaced as a suggestion.
 

@@ -1,12 +1,12 @@
 {
-  "name": "claude-education-skills-mcp",
+  "name": "education-agent-skills-mcp",
   "version": "0.1.0",
   "description": "MCP server exposing the Claude Education Skills library as callable tools",
   "license": "CC-BY-SA-4.0",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "claude-education-skills": "./dist/cli.js"
+    "education-agent-skills": "./dist/cli.js"
   },
   "files": [
     "dist",
