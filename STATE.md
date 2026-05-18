@@ -1,39 +1,37 @@
 # STATE.md — education-agent-skills
 
-**Last updated:** 2026-05-10
+**Last updated:** 2026-05-18 (Session 4)
 
 ## What was done
 
-### Rename: claude-education-skills → education-agent-skills
-- GitHub repo renamed (done outside this session)
-- All 19 files updated (package.json, mcp-server/*, .claude-plugin/*, docs/*, tests/*, README.md, etc.)
-- .codex-plugin/plugin.json created for OpenAI Codex support
-- AGENTS.md created for coding agent repo guidance
+Added the `inclusive-design` domain with 3 Universal Design for Learning (UDL) skills:
 
-### Tests fixed
-- Test count assertions updated from 107/14 to 131/17 (actual counts from disk)
-- Added missing `skills` field to .claude-plugin/plugin.json (was causing test failure)
-- All 20 tests pass
+1. **udl-lesson-auditor** — Audits an existing lesson against all three UDL principles (engagement, representation, action/expression). Identifies specific access barriers, suggests concrete modifications ranked by impact, and respects stated teacher constraints.
 
-### README restructured
-- New "Get Started" section placed immediately after intro/badges
-- Platform-equal structure: Claude, OpenAI Codex, Any Agent Skills tool, Manual
-- Removed "Using the Library" (Claude-specific, now merged into Get Started)
-- Removed "What Changed in v2" (moved to CHANGELOG.md)
-- Removed "Install as Agent Skills" (merged into Get Started)
-- CHANGELOG.md created with v3.0 and v2.0 entries
+2. **udl-options-designer** — Generates 2-3 specific alternatives per UDL principle for a given learning goal. Emphasises specificity (not "add visual supports" but the exact representation). Includes a minimum viable UDL recommendation — the one highest-impact change.
+
+3. **udl-barrier-anticipator** — Predicts access barriers before delivery given a learner variability profile. Analyses engagement, representation, action/expression, environmental, and assessment barriers. Distinguishes barriers addressable through design from barriers requiring specialist support.
+
+All three skills:
+- evidence_strength: moderate (UDL is well-established as a design framework; implementation evidence is mostly quasi-experimental — no large RCTs for the complete framework)
+- Cite: Rose & Meyer (2002), CAST (2018) UDL Guidelines v2.2, Meyer Rose & Gordon (2014), Ok et al. (2017) systematic review, Rao & Meo (2016), Edyburn (2010)
+- No claims that UDL "ensures" or "guarantees" inclusion
+- chains_well_with: all three UDL skills cross-link plus curriculum-assessment/differentiation-adapter, curriculum-assessment/formative-assessment-technique-selector, self-regulated-learning/self-regulation-scaffold-generator (all verified to exist on disk)
 
 ## What was verified
-- `npx playwright test` → 20 passed, 0 failed
-- No remaining references to "claude-education-skills" outside node_modules
-- README structure confirmed readable
 
-## Current state
-- 131 skills across 17 domains
-- All tests green
-- Live MCP server: mcp-server-sigma-sooty.vercel.app/mcp
-- CoWork plugin: .claude-plugin/plugin.json
-- Codex plugin: .codex-plugin/plugin.json
+- All 3 description fields verified ≤250 characters via Python: 199, 219, 195 chars
+- All chains_well_with targets confirmed to exist on disk
+- `python3 scripts/validate-skills.py`: 142 skills, 0 errors, 4 pre-existing warnings (line-length)
+- `python3 scripts/validate-registry.py`: 142 skills, 19 domains — valid
+- `npx playwright test`: 20/20 pass
+- `cd mcp-server && npm run build && npm test`: 16/16 pass
+- CI workflow updated: 139 → 142
+- CLAUDE.md updated: 142 skills, 19 domains, inclusive-design added to domain list
+- README updated: badge, description count, domain table (19 domains), MCP tool count (146 tools, 142 prompts)
+- Committed and pushed: 129d584
 
 ## What's next
-- No outstanding tasks
+
+- Session 5 candidates: another domain, or composite orchestrator linking UDL skills with differentiation-adapter and self-regulation-scaffold-generator
+- EAL domain has natural overlap with UDL representation barriers — potential cross-domain chains worth documenting
