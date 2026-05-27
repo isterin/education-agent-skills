@@ -1,11 +1,11 @@
 # Education Agent Skills Library
 
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-1.0-blue)](https://agentskills.io)
-[![Skills](https://img.shields.io/badge/skills-152-blue)](https://github.com/GarethManning/education-agent-skills)
+[![Skills](https://img.shields.io/badge/skills-165-blue)](https://github.com/GarethManning/education-agent-skills)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Last Commit](https://img.shields.io/github/last-commit/GarethManning/education-agent-skills)](https://github.com/GarethManning/education-agent-skills/commits/main)
 
-An open-source library of 152 evidence-based pedagogical skills for curriculum design, lesson planning, and assessment — works in Claude Code, Claude.ai (via MCP), and OpenAI Codex, and engineered for AI agent orchestration.
+An open-source library of 165 evidence-based pedagogical skills across 20 domains — works in Claude Code, Claude.ai (via MCP), and OpenAI Codex, and engineered for AI agent orchestration. Domains 1–19 are teacher and designer-facing. Domain 20 is the first student-facing domain: live AI interaction patterns that shape how AI responds to learners during study sessions.
 
 > [!IMPORTANT]
 > **Hosted MCP access now requires an auth token.**
@@ -182,7 +182,9 @@ YAML schema headers, typed input and output fields, chaining metadata, and compo
 
 ---
 
-## The 19 Domains
+## The 20 Domains
+
+> **Note on Domain 20:** Domains 1–19 are teacher and designer-facing — they generate plans, rubrics, scaffolds, and assessments. Domain 20 is different: these skills run live during a student's study session, shaping how AI responds to a learner in real time. The governing principle is the same across all 20 domains — evidence-grounded — but the user, the output, and the invocation pattern are all different. See [Domain 20 skills](skills/student-learning/) for details.
 
 | # | Domain | Skills | Focus |
 |---|--------|--------|-------|
@@ -205,6 +207,7 @@ YAML schema headers, typed input and output fields, chaining metadata, and compo
 | 17 | **Historical Thinking** | 10 | Sourcing, close reading, contextualisation, corroboration, document-based lesson design, document set curation, source adaptation, strategy modelling, assessment design, central question evaluation |
 | 18 | **Systems Thinking** | 8 | Systems awareness iceberg, aspirational iceberg, hexagon complexity mapper, leverage and response design, mental model mapper, agency circles for systems action, ladder of inference, systems wellbeing impact |
 | 19 | **Inclusive Design** | 3 | UDL lesson auditing, options design across engagement/representation/action, proactive barrier anticipation before delivery |
+| 20 | **Student-Facing Learning Skills** *(new)* | 13 | Retrieve-first gate, explain-first interrogator, progressive hint ladder, confidence calibration check, stuck & error diagnosis coach, AI claim checker, transfer bridge, teach-back evaluator, productive failure protocol, SRL session wrapper, unassisted evidence checkpoint, weekly agency review, fading manager |
 
 ---
 
@@ -243,8 +246,8 @@ Connect from Claude.ai by adding the URL under **Integrations > MCP Servers**. C
 ```
 
 The server exposes:
-- **156 tools** (152 skills + 4 discovery tools: `list_skills`, `find_skills`, `suggest_skills`, `get_skill_details`)
-- **152 prompts** (for clients that surface MCP prompts)
+- **169 tools** (165 skills + 4 discovery tools: `list_skills`, `find_skills`, `suggest_skills`, `get_skill_details`)
+- **165 prompts** (for clients that surface MCP prompts)
 
 Source code, local setup, and development instructions: [`mcp-server/`](mcp-server/)
 
