@@ -1,6 +1,5 @@
 {
   "name": "education-agent-skills",
-  "displayName": "Claude Education Skills Library",
   "version": "2.1.0",
   "description": "131 evidence-based pedagogical skills for educators. Curriculum design, assessment, learning science, wellbeing, professional learning, historical thinking, and more.",
   "author": {
@@ -8,6 +7,6 @@
     "url": "https://github.com/GarethManning"
   },
   "homepage": "https://github.com/GarethManning/education-agent-skills",
-  "license": "CC BY-SA 4.0",
-  "skills": ["./skills/ai-learning-science/"]
+  "repository": "https://github.com/GarethManning/education-agent-skills",
+  "license": "CC-BY-SA-4.0"
 }
